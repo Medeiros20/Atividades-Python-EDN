@@ -4,9 +4,9 @@ taxa_dolar = 5.20
 taxa_euro = 6.15
 
 #Calcula o valor convertido em dolar
-valor_dolar = valor_reais * taxa_dolar
+valor_dolar = valor_reais / taxa_dolar
 #Calcula o valor convertido em euro
-valor_euro = valor_reais * taxa_euro
+valor_euro = valor_reais / taxa_euro
 
 #Mostra ao usuario a taxa do dolar
 print(f"O valor da taxa de dolar está: {taxa_dolar:.2f}")
