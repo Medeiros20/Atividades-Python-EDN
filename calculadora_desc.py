@@ -1,7 +1,7 @@
 # Calculadora de Desconto
 
 produto = "Camisa"
-preco_original = 50.0
+preco_original = 50.00
 porcentagem_desconto = 20 / 100
 
 # Calculando o valor com desconto

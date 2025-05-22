@@ -1,5 +1,5 @@
 # CONVERSOR
-valor_reais = 100.0
+valor_reais = 100.00
 taxa_dolar = 5.20
 taxa_euro = 6.15
 
