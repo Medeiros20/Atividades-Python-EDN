@@ -1,39 +1,36 @@
-#CALCULADORA DAS 4 OPERAÇÕES
-print("--CALCULADORA DAS QUATROS OPERAÇÕES--")
+print("--CALCULADORA DAS QUATRO OPERAÇÕES--")
 print("1 - Adição")
 print("2 - Subtração")
 print("3 - Multiplicação")
 print("4 - Divisão")
 
-op = int(input("Escolha qual operação você deseja realizar: "))
+try:
+    op = int(input("Escolha qual operação você deseja realizar: "))
 
-if op == 1:
-    numero1 = float(input("Digite um numero: "))
-    numero2 = float(input("Digite um número: "))
-    soma = numero1 + numero2
-    print(f"{numero1:.2f} + {numero2:.2f} = {soma:.2f}")
+    if op in [1, 2, 3, 4]:
+        numero1 = float(input("Digite um número: "))
+        numero2 = float(input("Digite outro número: "))
 
-elif op == 2:
-    numero1 = float(input("Digite um numero: "))
-    numero2 = float(input("Digite um número: "))
-    sub = numero1 - numero2
-    print(f"{numero1:.2f} - {numero2:.2f} = {sub:.2f}")
+        if op == 1:
+            resultado = numero1 + numero2
+            operador = '+'
+        elif op == 2:
+            resultado = numero1 - numero2
+            operador = '-'
+        elif op == 3:
+            resultado = numero1 * numero2
+            operador = 'x'
+        elif op == 4:
+            if numero2 == 0:
+                raise ZeroDivisionError("Divisão por zero não é permitida!")
+            resultado = numero1 / numero2
+            operador = '/'
 
-elif op == 3:
-    numero1 = float(input("Digite um numero: "))
-    numero2 = float(input("Digite um número: "))
-    mult = numero1 * numero2
-    print(f"{numero1:.2f} x {numero2:.2f} = {mult:.2f}")
-
-elif op == 4:
-    numero1 = float(input("Digite um numero: "))
-    numero2 = float(input("Digite um número: "))
-    if numero2 != 0:
-        div = numero1/numero2
-        print(f"{numero1:.2f} / {numero2:.2f} = {div:.2f}")
+        print(f"{numero1:.2f} {operador} {numero2:.2f} = {resultado:.2f}")
     else:
-        print("ERRO, divisão por zero não é permitida!")
+        print("Opção inválida. Por favor, escolha entre 1 e 4.")
 
-else:
-    print("Opção Invalida")
-
+except ValueError:
+    print("Erro: Digite apenas números válidos.")
+except ZeroDivisionError as e:
+    print(f"Erro: {e}")
