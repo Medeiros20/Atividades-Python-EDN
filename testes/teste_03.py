@@ -9,8 +9,11 @@
 
 arquivo = open("testes/linguagem.txt", "r")
 
+#verifica se o arquivo pode ser lido
 print(arquivo.readable())
-
-print(arquivo.read())
-
+#lê o arquivo e o print mostra o arquivo 
+print(arquivo.read(),"\n")
+#lê linha por linha
+print(arquivo.readline())
+#fecha o arquivo
 arquivo.close()
